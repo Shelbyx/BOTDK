@@ -18,12 +18,12 @@ const arrayBulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Jul
 const bulan = arrayBulan[moment().format('MM') - 1]
 
 const config = {
-    A187: '📍D4RKBOT📍',
+    A187: '𝚫𝑆𝛵𝑹𝚯  ͢𝜝𝛩𝑻 (ASTRO BOT)',
     instagram: 'OFF',
-    nomer: 'wa.me/21997123716',
+    nomer: 'wa.me/+6285202707284',
     aktif: '24 JAM',
-    youtube: 'https://youtube.com/channel/UCRaC-6JyCW_iqbW1DbuXVxQ',
-    whatsapp: 'https://chat.whatsapp.com/KTlC0MXi3WJChdQeps5flt',
+    youtube: 'OFF',
+    whatsapp: '🇧🇷 : https://chat.whatsapp.com/Gk1M5x5XhQ0GeVLSEG7AEg  🇪🇸 : https://chat.whatsapp.com/FrcNhOVBNKKEI0g7bbkx3J',
     tanggal: `TANGGAL: ${moment().format('DD')} ${bulan} ${moment().format('YYYY')}`,
     waktu: time
 }
@@ -123,11 +123,11 @@ fs.existsSync('./session.json') && client.loadAuthInfo('./session.json')
 
 client.connect();
 
-// client.on('user-presence-update', json => console.log(json.id + ' presence is => ' + json.type)) || console.log(`${time}: Bot by ig:@aditiaalfians`)
+// client.on('user-presence-update', json => console.log(json.id + ' presence is => ' + json.type)) || console.log(`${time}: 𝚫𝑆𝛵𝑹𝚯  ͢𝜝𝛩𝑻`)
 
 client.on('message-status-update', json => {
    const participant = json.participant ? ' (' + json.participant + ')' : ''
-   console.log(`[ ${time} ] => bot by ig:@_sadboy.ig`)
+   console.log(`[ ${time} ] => 𝚫𝑆𝛵𝑹𝚯  ͢𝜝𝛩𝑻 _→`)
 })
 
 client.on('message-new', async (m) => {
@@ -168,7 +168,7 @@ client.on('message-new', async (m) => {
        case 'nulis':
            nulis(value)
                .then(data => {
-                   client.sendMessage(id, '[ESPERE UM POUCO...', MessageType.text)
+                   client.sendMessage(id, '⌛ Aguarde um momento , se não for da primeira vez , tente de novo.  🇪🇸: Espera un momento, si no hacer en la primera vez, vuelve a intentarlo. ⏳ ', MessageType.text)
                    client.sendMessage(id, data, MessageType.image)
                })
                .catch(err => {
@@ -182,8 +182,8 @@ client.on('message-new', async (m) => {
            ytdl('mp3', value)
                .then(data => {
                    const { judul, size, hasil: link } = data
-                   let hasil = `OLA AQUI ESTA O LINK DE DOWNLOAD DA MSC\nCLIQUE NO LINK ABAIXO:\nMUSICA: ${judul}\n\nTamanho Do audio: ${size}\n\nLink: ${link}`
-                   client.sendMessage(id, '[ESPERE UM POUCO...', MessageType.text)
+                   let hasil = `Olá Aqui Esta O Link De Download Da Música\nClique No Link Abaixo:\nMUSICA: ${judul}\n\nTamanho Do Áudio: ${size}\n\nLink: ${link}`
+                   client.sendMessage(id, '⌛ Aguarde um momento , se não for da primeira vez , tente de novo.  🇪🇸: Espera un momento, si no hacer en la primera vez, vuelve a intentarlo. ⏳ ', MessageType.text)
                    client.sendMessage(id, hasil, MessageType.text)
                })
                .catch(err => {
@@ -194,8 +194,8 @@ client.on('message-new', async (m) => {
            ytdl('mp4', value)
                .then(data => {
                    const { judul, size, hasil: link } = data
-                   let hasil = `OLA AQUI ESTA O LINK DE DOWNLOAD DA MSC\nCLIQUE NO LINK ABAIXO:\nMUSICA: ${judul}\n\nTamanho Do audio: ${size}\n\nLink: ${link}`
-                   client.sendMessage(id, '[ESPERE UM POUCO...', MessageType.text)
+                   let hasil = `Olá Aqui Esta O Link De Download Do Vídeo\nClique No Link Abaixo:\nVídeo: ${judul}\n\nTamanho Do Arquivo Do Vídeo: ${size}\n\nLink: ${link}`
+                   client.sendMessage(id, '⌛ Aguarde um momento , se não for da primeira vez , tente de novo.  🇪🇸: Espera un momento, si no hacer en la primera vez, vuelve a intentarlo. ⏳ ', MessageType.text)
                    client.sendMessage(id, hasil, MessageType.text)
                })
                .catch(err => {
@@ -207,7 +207,7 @@ client.on('message-new', async (m) => {
                .then(data => {
                     const { size, hasil: link } = data
                     let hasil = `✄1�71ￄ1�77 Berhasil! silahkan klik link di bawah untuk mendownload hasilnya!\nKlik link dibawah🗡️\n\nSize: ${size}\n\nLink: ${link}`
-                    client.sendMessage(id, '[ESPERE UM POUCO...', MessageType.text)
+                    client.sendMessage(id, '⌛ Aguarde um momento , se não for da primeira vez , tente de novo.  🇪🇸: Espera un momento, si no hacer en la primera vez, vuelve a intentarlo. ⏳ ', MessageType.text)
                     client.sendMessage(id, hasil ,MessageType.text)
                })
                .catch(err => {
@@ -278,7 +278,7 @@ client.on('message-new', async (m) => {
            corona()
                .then(data => {
                    const { meninggal, sembuh, positif } = data
-                   let hasil = `📌ÚLTIMOS DADOS DO DISTRITO COVID-19 DA INDONÉSIA\n\n📍Positivo ==> ${positif} \n📍Curado ==> ${sembuh} \n📍Morreu ==> ${meninggal}`
+                   let hasil = `📌ÚLTIMOS DADOS DO COVID-19 NA INDONÉSIA\n\n📍Positivo ==> ${positif} \n📍Curado ==> ${sembuh} \n📍Morreu ==> ${meninggal}`
                    client.sendMessage(id, hasil, MessageType.text)
                })
                .catch(err => {
@@ -371,7 +371,7 @@ client.on('message-new', async (m) => {
            fb(value)
                .then(data => {
                    const { resultHD, resultSD } = data
-                   let hasil = `Escolha a resolução querida😙 \n\n\n HD ${resultHD} \n\n\n SD ${resultSD}`
+                   let hasil = `Escolha a resolução 🥴 \n\n\n HD ${resultHD} \n\n\n SD ${resultSD}`
                    client.sendMessage(id, hasil, MessageType.text)
                })
                .catch(err => {
@@ -410,7 +410,7 @@ client.on('message-new', async (m) => {
                .then(data => {
                    const { Username, Jumlah_Followers, Jumlah_Following, Name, Jumlah_Post } = data
                    client.sendMessage(id, '[Aguarde] Stalkeando...', MessageType.text)
-                   let hasil = `✨Bio do Instagram _${value}_ \n\n 🧶 *Nome do usuário* : ${Username}_ \n 🌀 *Nome* : _${Name}_ \n 🌟 *Número de Seguidores* : _${Jumlah_Followers}_ \n 🌠 *Segue* : _${Jumlah_Following}_ \n ⭄*Total de posts* : _${Jumlah_Post}_ `
+                   let hasil = `✨Bio do Instagram _${value}_ \n\n 🧶 *Nome do usuário* : ${Username}_ \n 🌀 *Nome* : _${Name}_ \n 🥴 *Número de Seguidores* : _${Jumlah_Followers}_ \n 🌠 *Segue* : _${Jumlah_Following}_ \n ⭄*🙂 Total de posts* : _${Jumlah_Post}_ `
                    client.sendMessage(id, hasil, MessageType.text)
                })
                .catch(err => {
